@@ -1,0 +1,26 @@
+{
+  "name": "first-app-nodejs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueldlh/first-app-nodejs.git"
+  },
+  "author": "samueldlh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samueldlh/first-app-nodejs/issues"
+  },
+  "homepage": "https://github.com/samueldlh/first-app-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
