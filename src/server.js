@@ -1,12 +1,17 @@
 const express = require('express');
-
-const config = require('./config');
+const path = require('path');
 
 const app = express();
 
-app.use('/', (req, res) => {
-    res.send('Hola mundo :)');
-});
+const config = require('./config');
+const router = require('./routes/router');
+
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, '/views'));
+
+app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(router);
 
 app.listen(config.port, (req, res) => {
     console.log(`Server listening on port ${config.port}`);
