@@ -5,6 +5,7 @@ const app = express();
 
 const config = require('./config');
 const router = require('./routes/router');
+const routerApi = require('./routes/api');
 
 /// Configuración
 app.set('views', path.join(__dirname, '/views'));
@@ -14,5 +15,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 /// Routes
 app.use(router);
+app.use('/api', routerApi);
 
 app.listen(config.port, (req, res) => console.log(`Server listening on port ${config.port}`));
